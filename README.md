@@ -18,16 +18,16 @@ Include the scripts in your HTML head:
 Set up your HTML something like the following (class names/IDs can be changed and passed into `infiniscroll()`):
 
 ```html
-	<div class="content">
-		<h1>My Content</h1>
-		<p>Lorem ipsum dolor sit amet...</p>
+<div class="content">
+	<h1>My Content</h1>
+	<p>Lorem ipsum dolor sit amet...</p>
 
-		<div class="pagination">
-			...
-			<a href="/page/2" class="next">Next</a>
-		</div>
+	<div class="pagination">
+		...
+		<a href="/page/2" class="next">Next</a>
 	</div>
-	<div class="loading">Loading...</div>
+</div>
+<div class="loading">Loading...</div>
 ```
 
 Then simply hook up Infiniscroll:
@@ -68,7 +68,7 @@ jQuery will load in any local URL, then parse the html and grab only the element
 ```javascript
 // Load all post divs from page 2 into an off-DOM div
 $('.content').load('/page/2/ .content',function(){
-	$(this).appendTo('.content');    // once they're loaded, append them to our content area
+	$(this).appendTo('.content'); // once they're loaded, append them to our content area
 });
 ```
 
