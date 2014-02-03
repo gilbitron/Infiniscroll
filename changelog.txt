@@ -1,0 +1,4 @@
+***Infiniscroll Changelog ***
+
+2014.02.03 - version 1.0
+ * Initial release
