@@ -59,7 +59,25 @@ beforeContentLoaded: function(link){},	// Callback before new content is loaded
 afterContentLoaded: function(html){}	// Callback after new content has been loaded
 ```
 
+How?
+----
+
+There is a little known feature in the `.load()` method that lets you specify the CSS selector of the html you want to include.
+jQuery will load in any local URL, then parse the html and grab only the elements you’ve defined with your selector. For example:
+
+```javascript
+// Load all post divs from page 2 into an off-DOM div
+$('.content').load('/page/2/ .content',function(){
+	$(this).appendTo('.content');    // once they're loaded, append them to our content area
+});
+```
+
+Why?
+----
+
+See [http://gilbert.pellegrom.me/jquery-infiniscroll-plugin](http://gilbert.pellegrom.me/jquery-infiniscroll-plugin)
+
 Credits
 -------
 
-TipTop was created by [Gilbert Pellegrom](http://gilbert.pellegrom.me) from [Dev7studios](http://dev7studios.com). Released under the MIT license.
+Infiniscroll was created by [Gilbert Pellegrom](http://gilbert.pellegrom.me) from [Dev7studios](http://dev7studios.com). Released under the MIT license.
